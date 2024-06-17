@@ -22,8 +22,9 @@ jobs:
         python-version: "3.12"
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install manim-slides[pyqt6-full]
+        sudo apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg
+        python -m pip install --upgrade pip pipx manim
+        pipx install manim-slides[pyqt6-full]
     - name: Build
       run: |
         manim-slides render -qk main.py MainScene
