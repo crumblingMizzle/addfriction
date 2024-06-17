@@ -1,6 +1,6 @@
 __pycache__/
 media/
-out_assets/
+*_assets/
 slides/
-out.html
+*.html
 deploy*

@@ -188,12 +188,11 @@ class MainScene(Slide):
     def slide_thanks(self):
         if self.slide_state == 0:
             self.set_header("Thank you!", True)
-            self.subtitle = Text("The source code for this presentation is available at\n\nhttps://github.com/crumblingMizzle/addfriction", font_size=FONT_SIZE_HEADER-8)
-            self.subtitle.move_to(DOWN * 2)
+            self.subtitle = Text("Slides: https://crumblingmizzle.github.io/addfriction/\n\nSource code: https://github.com/crumblingMizzle/addfriction", font_size=FONT_SIZE_HEADER-12, line_spacing=0)
+            self.subtitle.move_to(DOWN * 3)
             self.play(Write(self.subtitle))
         else:
-            self.play(FadeOut(self.subtitle))
-            self.play(FadeOut(self.header_text))
+            self.play(FadeOut(self.subtitle, self.header_text))
             return True
         self.slide_state += 1
         return False
