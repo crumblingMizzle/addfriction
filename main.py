@@ -140,9 +140,9 @@ class MainScene(Slide):
         if self.slide_state == 0:
             self.set_header("The critics agree!")
         elif self.slide_state == 1:
-            self.set_image("images/catcafe.png")
-        elif self.slide_state == 2:
             self.set_image("images/genshin.png")
+        elif self.slide_state == 2:
+            self.set_image("images/catcafe.png")
         elif self.slide_state == 3:
             self.set_image("images/re3.png")
         elif self.slide_state == 4:
